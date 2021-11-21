@@ -1,0 +1,19 @@
+{
+  "name": "csv-json-cli",
+  "version": "0.0.1",
+  "description": "CLI tool to convert csv to json",
+  "author": "Simon Haugen",
+  "license": "MIT",
+  "keywords": [
+    "csv",
+    "json",
+    "deno",
+    "cli"
+  ],
+  "bin": {
+    "csv-json-cli": "./csv-json-cli"
+  },
+  "files": [
+    "./csv-json-cli"
+  ]
+}
