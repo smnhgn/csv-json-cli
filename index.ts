@@ -5,11 +5,16 @@ interface ParsedRow {
 }
 
 const usage = `
-Usage: csv-json-cli -f /path/to/csv -o /path/to/json
-    
+Usage: 
+  csv-json-cli -f ./sample.csv -o ./sample.json
+
+Required:
+  file: -f <csv> or --f=<csv>
+  output: -o <json> or --o=<json>
 Optional: 
-  -s <separator> 
-  -p <pretty json>
+  help: -h or --h
+  separator: -s <separator> or --s=<separator> (default ",")
+  pretty: -p or --p (default "false")
 `;
 
 function printHelp() {
@@ -22,11 +27,11 @@ function isNumberString(value: string): boolean {
 
 async function main(args: string[]) {
   const {
-    help,
+    h: help,
     f: file,
     o: output,
     s: separator = ",",
-    pretty,
+    p: pretty,
   } = parseArgs(args);
 
   if (help) {
